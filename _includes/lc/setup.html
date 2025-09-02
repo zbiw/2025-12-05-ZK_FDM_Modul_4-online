@@ -1,105 +1,150 @@
-<div id="spreadsheets-setup">
-  <h3>Spreadsheet Software</h3>
-  <p>
-    To interact with spreadsheets, we can use <a href="https://www.libreoffice.org">LibreOffice</a>, 
-    <a href="https://products.office.com/en-us/excel">Microsoft Excel</a>, 
-    <a href="https://www.gnumeric.org">Gnumeric</a>, 
-    <a href="https://www.openoffice.org">OpenOffice.org</a>, 
-    or other programs. 
-    Commands may differ a bit between programs, but general ideas for thinking about spreadsheets is the same.
-  </p>
-  <p>
-    For this lesson, if you don't have a spreadsheet program already, 
-    you can use [LibreOffice](https://www.libreoffice.org). 
-    It is a free, open source spreadsheet program.
-  </p>
-  <h4>Windows</h4>
-  <p>
-    <ul>
-      <li><strong>Download the Installer:</strong>
-        Install LibreOffice by going to the 
-        <a href="https://www.libreoffice.org/download/libreoffice-fresh/">installation page</a>.
-        The version for Windows should automatically be selected. 
-        Click <strong>Download</strong>. 
-        You will go to a page that asks about a donation, but you don't need to make one. 
-        Your download should begin automatically.</li>
-      <li><strong>Install LibreOffice:</strong>  
-        Once the installer is downloaded, double click on it and it should install.</li>
-    </ul>
-  </p>
-  <h4>Mac OS</h4>
-  <p>
-    <ul>
-      <li><strong>Download the Installer:</strong>
-        Install LibreOffice by going to the 
-        <a href="https://www.libreoffice.org/download/libreoffice-fresh/">installation page</a>.
-        The version for Mac OS should automatically be selected. 
-        Click <strong>Download</strong>. 
-        You will go to a page that asks about a donation, but you don't need to make one. 
-        Your download should begin automatically.</li>
-      <li><strong>Install LibreOffice:</strong>  
-        The file <code>LibreOffice\_X.X.X\_MacOS\_x86-64</code> (whichever version of LibreOffice you have selected) should have been downloaded. 
-        Double click on this file, and LibreOffice will be installed.</li>
-    </ul>
-  </p>
-  <h4>Linux</h4>
-  <p>
-    <ul>
-      <li><strong>Download the Installer:</strong>
-        Install LibreOffice by going to the 
-        <a href="https://www.libreoffice.org/download/libreoffice-fresh/">installation page</a>.
-        The version for Linux should automatically be selected. 
-        Click <strong>Download</strong>. 
-        You will go to a page that asks about a donation, but you don't need to make one. 
-        Your download should begin automatically.</li>
-      <li><strong>Install LibreOffice:</strong>  
-        Once the installer is downloaded, double click on it and it should install.</li>
-    </ul>
-  </p>
-</div>
+{% comment %}
 
-<div id="shell-setup"> {% comment %} Start of 'shell' section. {% endcomment %}
-  <h3>The Bash Shell</h3>
-  <p>
-    Bash is a commonly-used shell that gives you the power to do simple tasks
-    more quickly. Please find setup instructions in
-    the <a href="https://librarycarpentry.org/lc-shell/index.html#setup">lesson</a>.
-  </p>
-</div>
+Remove the third paragraph if the workshop will teach Python
+using something other than the Jupyter Notebook. Details at
 
-<div id="openrefine-setup">
-  <h3>OpenRefine</h3>
-  <p>
-    OpenRefine is a tool to clean up and organize messy data. Please find instructions to
-    install it and the data used in the lesson in the
-    <a href="https://librarycarpentry.org/lc-open-refine/">lesson</a>.
-  </p>
-</div>
+https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility
+{% endcomment %}
+<div id="python">
+  <h3>Python</h3>
 
-<div id="git-setup"> {% comment %} Start of 'Git' section. GitHub browser compatibility
-  is given at https://help.github.com/articles/supported-browsers/{% endcomment %}
-  <h3>Git</h3>
   <p>
-    Git is a version control system that lets you track who made changes
-    to what when and has options for easily updating a shared or public
-    version of your code
-    on <a href="https://github.com/">https://github.com</a>.
+    <a href="https://python.org">Python</a> is a popular language for
+    research computing, and great for general-purpose programming as
+    well.  Installing all of its research packages individually can be
+    a bit difficult, so we recommend
+    <a href="https://conda-forge.org/download/">Conda-forge</a>,
+    an all-in-one installer.
   </p>
+
   <p>
-    Follow the instructions on
-    the <a href="https://librarycarpentry.org/lc-git/index.html#setup">lesson</a> to
-    install Git on your system.
+    Regardless of how you choose to install it,
+    <strong>please make sure you install a Python version >= 3.9</strong>
+    (e.g. 3.11 is fine, 3.6 is not).
   </p>
+
+  {% comment %}
+  Please remove or comment out this paragraph using
+  <!-- and --> or  {% comment %} and {% endcomment %}
+  if you do not plan to use Jupyter Notebook environment.
+  {% endcomment %}
   <p>
-    You will need an account at <a href="https://github.com/">github.com</a>
-    for parts of the Git lesson. Basic GitHub accounts are free. We encourage
-    you to create a GitHub account if you don't have one already.
-    Please consider what personal information you'd like to reveal. For
-    example, you may want to review these
-    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions
-      for keeping your email address private</a> provided at GitHub. You will
-      need a
-    <a href="https://help.github.com/articles/supported-browsers/">supported
-    web browser</a>.
+    We will teach Python using the <a href="https://jupyter.org/">Jupyter Notebook</a>,
+    a programming environment that runs in a web browser (Jupyter Notebook will be installed by Miniforge). For this to work you will need a reasonably
+    up-to-date browser. The current versions of the Chrome, Safari and
+    Firefox browsers are all
+    <a href="https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatibility">supported</a>
+    (some older browsers, including Internet Explorer version 9
+    and below, are not).
   </p>
+
+  <div>
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a data-os="windows" href="#python-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
+      <li role="presentation"><a data-os="macos" href="#python-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
+      <li role="presentation"><a data-os="linux" href="#python-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <article role="tabpanel" class="tab-pane active" id="python-windows">
+        <ol>
+          <li>Open <a href="https://conda-forge.org/download/">https://conda-forge.org/download/</a> with your web browser.</li>
+          <li>Download the Miniforge for Windows installer</li>
+	  <li>Double click on the downloaded file (Something like, <code>Minforge3-Windows-x86_64.exe</code>)</li>
+	  <li>If you get a "Windows protected your PC" pop-up from Microsoft Defender SmartScreen, click on "More info" and select "Run anyway"</li>
+          <li>Follow through the installer using all of the defaults for installation <em>except</em> make sure to check <strong>Add Miniforge3 to my PATH environment variable</strong>.</li>
+	  {% comment %}
+	  <li>Search for the application "Miniforge Prompt", open it and run: <code>conda install jupyter</code> and click <kbd>Enter</kbd> when asked for confirmation.</li>
+	  if we want to add an icon, it can be done with:
+	  https://medium.com/@kostal91/create-a-desktop-shortcut-for-jupyterlab-on-windows-9fcabcfa0d3f - easier and more convenient using %userprofile% variable rather than users\%username%
+	  and need to update miniconda for miniforge
+	  Also, the https://pypi.org/project/start-jupyter-cm/ could be helpful.
+	  {% endcomment %}
+	  <li>Download the <a href="https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml" download>environment file</a>. Save the file to your Downloads folder.<br>
+	    (The following steps requires using the shell. If you aren't
+            comfortable doing the installation yourself
+            stop here and request help at the workshop.)
+	  </li>
+	  <li>Search for the application "Miniforge Prompt", open it and run: <code>conda env create -f .\Downloads\carpentries_environment.yml</code></li>
+          <li>Close the terminal window.</li>
+        </ol>
+      </article>
+      <article role="tabpanel" class="tab-pane" id="python-macos">
+        <ol>
+          <li>Open <a href="https://conda-forge.org/download/">https://conda-forge.org/download/</a> with your web browser.</li>
+          <li>Download the appropriate Miniforge installer for macOS<br>
+	    (The following steps requires using the shell. If you aren't
+            comfortable doing the installation yourself
+            stop here and request help at the workshop.)
+	  </li>
+          <li>
+            Open a terminal window and navigate to the directory where
+            the executable is downloaded (e.g., <code>cd ~/Downloads</code>).
+          </li>
+          <li>
+            Type <pre>bash Miniforge3-</pre> and then press
+            <kbd>Tab</kbd> to autocomplete the full file name. The name of
+            file you just downloaded should appear.
+          </li>
+          <li>
+            Press <kbd>Enter</kbd>
+            (or <kbd>Return</kbd> depending on your keyboard).
+            You will follow the text-only prompts.
+            To move through the text, press <kbd>Spacebar</kbd>.
+            Type <code>yes</code> and press enter to approve the license.
+            Press <kbd>Enter</kbd> (or <kbd>Return</kbd>)
+            to approve the default location
+            for the files.
+            Type <code>yes</code> and press
+            <kbd>Enter</kbd> (or <kbd>Return</kbd>)
+            to prepend Miniforge to your <code>PATH</code>
+            (this makes the Miniforge distribution the default Python).
+          </li>
+	  <li>Download the <a href="https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml" download>environment file</a>. Save the file to your Downloads folder.</li>
+	  <li>On the terminal run: <code>conda env create -f ~/Downloads/carpentries_environment.yml</code></li>
+          <li>
+            Close the terminal window.
+          </li>
+        </ol>
+      </article>
+      <article role="tabpanel" class="tab-pane" id="python-linux">
+        <ol>
+          <li>Open <a href="https://conda-forge.org/download/">https://conda-forge.org/download/</a> with your web browser.</li>
+          <li>Download the appropriate Miniforge installer for Linux<br>
+	    (The following steps requires using the shell. If you aren't
+            comfortable doing the installation yourself
+            stop here and request help at the workshop.)
+	  </li>
+          <li>
+            Open a terminal window and navigate to the directory where
+            the executable is downloaded (e.g., `cd ~/Downloads`).
+          </li>
+          <li>
+            Type <pre>bash Miniforge3-</pre> and then press
+            <kbd>Tab</kbd> to autocomplete the full file name. The name of
+            file you just downloaded should appear.
+          </li>
+          <li>
+            Press <kbd>Enter</kbd>
+            (or <kbd>Return</kbd> depending on your keyboard).
+            You will follow the text-only prompts.
+            To move through the text, press <kbd>Spacebar</kbd>.
+            Type <code>yes</code> and press enter to approve the license.
+            Press <kbd>Enter</kbd> (or <kbd>Return</kbd>)
+            to approve the default location
+            for the files.
+            Type <code>yes</code> and press
+            <kbd>Enter</kbd> (or <kbd>Return</kbd>)
+            to prepend Miniforge to your <code>PATH</code>
+            (this makes the Miniforge distribution the default Python).
+          </li>
+	  <li>Download the <a href="https://raw.githubusercontent.com/carpentries/workshop-template/refs/heads/gh-pages/data/carpentries_environment.yml" download>environment file</a>. Save the file to your Downloads folder.</li>
+	  <li>Search for the application "Miniforge Prompt", open it and run: <code>conda env create -f ~/Downloads/carpentries_environment.yml</code></li>
+          <li>
+            Close the terminal window.
+          </li>
+        </ol>
+      </article>
+    </div>
+  </div>
 </div>
